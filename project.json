@@ -1,0 +1,10 @@
+{
+    "name": "Experi",
+    "version": "1.0.0",
+    "manifest_version": 1,
+    "project_type": "application",
+    "executable_type": "scratch",
+    "executable": "Experi.xml",
+    "author": "ASE-gneiley",
+    "minimum_firmware_version": 42
+}
