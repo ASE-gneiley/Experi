@@ -1,1 +1,103 @@
-<xml xmlns="http://www.w3.org/1999/xhtml"></xml>
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <block type="comment_comment" id="2" x="46" y="4">
+    <field name="TEXT">Trying different commands</field>
+    <next>
+      <block type="variables_set" id="13" inline="true">
+        <field name="VAR">i</field>
+        <value name="VALUE">
+          <block type="math_number" id="21">
+            <field name="NUM">2</field>
+          </block>
+        </value>
+        <next>
+          <block type="variables_set" id="25" inline="true">
+            <field name="VAR">j</field>
+            <value name="VALUE">
+              <block type="variables_get" id="29">
+                <field name="VAR">i</field>
+              </block>
+            </value>
+            <next>
+              <block type="procedures_callnoreturn" id="135">
+                <mutation name="geoff"></mutation>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </next>
+  </block>
+  <block type="procedures_defnoreturn" id="39" x="492" y="101">
+    <mutation></mutation>
+    <field name="NAME">geoff</field>
+    <statement name="STACK">
+      <block type="variables_set" id="107" inline="true">
+        <field name="VAR">k</field>
+        <value name="VALUE">
+          <block type="math_arithmetic" id="114" inline="true">
+            <field name="OP">ADD</field>
+            <value name="A">
+              <block type="variables_get" id="122">
+                <field name="VAR">i</field>
+              </block>
+            </value>
+            <value name="B">
+              <block type="variables_get" id="130">
+                <field name="VAR">j</field>
+              </block>
+            </value>
+          </block>
+        </value>
+      </block>
+    </statement>
+  </block>
+  <block type="math_arithmetic" id="46" inline="true" x="-180" y="157">
+    <field name="OP">ADD</field>
+  </block>
+  <block type="controls_if" id="181" inline="false" x="44" y="161">
+    <value name="IF0">
+      <block type="sensor_object" id="188">
+        <field name="OBJECT">LEFTFRONT</field>
+      </block>
+    </value>
+    <statement name="DO0">
+      <block type="movement_reverse" id="205">
+        <next>
+          <block type="robot_delay" id="207" inline="true">
+            <value name="DELAY">
+              <block type="math_number" id="222">
+                <field name="NUM">1000</field>
+              </block>
+            </value>
+            <next>
+              <block type="movement_forward" id="232">
+                <next>
+                  <block type="robot_delay" id="243" inline="true">
+                    <value name="DELAY">
+                      <block type="math_number" id="244">
+                        <field name="NUM">2000</field>
+                      </block>
+                    </value>
+                    <next>
+                      <block type="movement_stop" id="242">
+                        <next>
+                          <block type="oled_drawnumber" id="262" inline="true">
+                            <value name="NUMBER">
+                              <block type="variables_get" id="270">
+                                <field name="VAR">k</field>
+                              </block>
+                            </value>
+                          </block>
+                        </next>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </statement>
+  </block>
+</xml>
